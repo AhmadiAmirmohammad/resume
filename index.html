@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Amirmohamad Ahmadi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         
@@ -50,20 +50,29 @@
             color: var(--primary-color);
         }
 
-        header p {
-            margin: 5px 0;
+        header .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        header .contact-info a {
             color: var(--secondary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
             font-size: 1rem;
         }
 
-        header a {
-            color: var(--link-color);
-            text-decoration: none;
+        header .contact-info a:hover {
+            color: var(--link-hover-color);
         }
 
-        header a:hover {
-            text-decoration: underline;
-            color: var(--link-hover-color);
+        header .contact-info a i {
+            margin-right: 5px;
+            font-size: 1.2rem;
         }
 
         .profile-picture {
@@ -169,7 +178,12 @@
         <header>
             <img class="profile-picture" src="40795087.png" alt="Amirmohamad Ahmadi Profile Picture">
             <h1>AMIRMOHAMAD AHMADI</h1>
-            <p>Isfahan, IR • +98 9330673103 • amir.mo.ahmadi@gmail.com • <a href="https://linkedin.com/in/amirmohamadahmadi" target="_blank">linkedin.com/in/amirmohamadahmadi</a> • <a href="https://github.com/AhmadiAmirmohammad" target="_blank">github.com/AhmadiAmirmohammad</a></p>
+            <div class="contact-info">
+                <a href="tel:+989330673103"><i class="fas fa-phone"></i> +98 9330673103</a>
+                <a href="mailto:amir.mo.ahmadi@gmail.com"><i class="fas fa-envelope"></i> amir.mo.ahmadi@gmail.com</a>
+                <a href="https://linkedin.com/in/amirmohamadahmadi" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/amirmohamadahmadi</a>
+                <a href="https://github.com/AhmadiAmirmohammad" target="_blank"><i class="fab fa-github"></i> github.com/AhmadiAmirmohammad</a>
+            </div>
         </header>
 
         <section class="summary">
