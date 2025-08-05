@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Amirmohamad Ahmadi</title>
+    <title>رزومه / Resume - امیرمحمد احمدی</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
         :root {
             --primary-color: #333;
             --secondary-color: #555;
@@ -20,12 +21,13 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Vazirmatn', sans-serif;
             margin: 0;
             padding: 20px;
             background-color: var(--background-color);
             color: var(--primary-color);
             line-height: 1.6;
+            direction: rtl; /* Default to RTL */
         }
 
         .container {
@@ -35,6 +37,38 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 30px;
             border-radius: 8px;
+        }
+        
+        #lang-switcher {
+            text-align: right;
+            direction: ltr; /* Ensure buttons stay in LTR order */
+            margin-bottom: 20px;
+        }
+
+        #lang-switcher button {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-left: 5px;
+            display: inline-block;
+        }
+        
+        #lang-switcher button:hover {
+            background-color: var(--border-color);
+            color: var(--primary-color);
+        }
+
+        #lang-switcher button.active-lang {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
         }
 
         header {
@@ -48,6 +82,7 @@
             margin: 0;
             font-size: 2.5rem;
             color: var(--primary-color);
+            text-align: center; /* Name stays centered regardless of language */
         }
 
         header .contact-info {
@@ -71,9 +106,19 @@
         }
 
         header .contact-info a i {
-            margin-right: 5px;
             font-size: 1.2rem;
         }
+        
+        body.fa-fa .contact-info a i { 
+            margin-left: 5px; 
+            margin-right: 0; 
+        }
+
+        body.fa-en .contact-info a i { 
+            margin-right: 5px; 
+            margin-left: 0; 
+        }
+
 
         .profile-picture {
             width: 150px;
@@ -119,7 +164,7 @@
             padding-left: 20px;
             margin-top: 10px;
         }
-
+        
         li {
             margin-bottom: 8px;
             color: var(--secondary-color);
@@ -151,7 +196,7 @@
             border-radius: 5px;
             font-size: 0.9rem;
         }
-
+        
         .certificates-container {
             display: flex;
             flex-wrap: wrap;
@@ -160,7 +205,7 @@
         }
 
         .certificate-item {
-            flex: 1 1 280px; /* این خط باعث می‌شود تصاویر ریسپانسیو شوند */
+            flex: 1 1 280px; 
             max-width: 300px;
             text-align: center;
             border: 1px solid var(--border-color);
@@ -174,182 +219,401 @@
             height: auto;
             border-radius: 5px;
         }
+
+        .content {
+            display: none;
+        }
         
+        .content.active {
+            display: block;
+        }
+        
+        body.fa-fa {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: rtl;
+        }
+        body.fa-fa h2, body.fa-fa h3, body.fa-fa h4, body.fa-fa p, body.fa-fa li { text-align: right; }
+        body.fa-fa ul { padding-right: 20px; padding-left: 0; }
+        
+        body.fa-en {
+            font-family: 'Roboto', sans-serif;
+            direction: ltr;
+        }
+        body.fa-en h2, body.fa-en h3, body.fa-en h4, body.fa-en p, body.fa-en li { text-align: left; }
+        body.fa-en ul { padding-left: 20px; padding-right: 0; }
+
         @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
             .container {
                 padding: 15px;
             }
-
             header h1 {
                 font-size: 2rem;
             }
-            
             .job-title, .education-title, .tutor-title {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
             .job-title span, .education-title span, .tutor-title span {
                 margin-top: 5px;
+            }
+            #lang-switcher {
+                margin-bottom: 10px;
             }
         }
     </style>
 </head>
-<body>
-
+<body class="fa-fa" dir="rtl">
     <div class="container">
-        <header>
-            <img class="profile-picture" src="40795087.png" alt="Amirmohamad Ahmadi Profile Picture">
-            <h1>AMIRMOHAMAD AHMADI</h1>
-            <div class="contact-info">
-                <a href="tel:+989330673103"><i class="fas fa-phone"></i> +98 9330673103</a>
-                <a href="mailto:amir.mo.ahmadi@gmail.com"><i class="fas fa-envelope"></i> amir.mo.ahmadi@gmail.com</a>
-                <a href="https://linkedin.com/in/amirmohamadahmadi" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/amirmohamadahmadi</a>
-                <a href="https://github.com/AhmadiAmirmohammad" target="_blank"><i class="fab fa-github"></i> github.com/AhmadiAmirmohammad</a>
-            </div>
-        </header>
+        <div id="lang-switcher">
+            <button id="lang-fa-btn" onclick="switchLanguage('fa')" title="فارسی">FA</button>
+            <button id="lang-en-btn" onclick="switchLanguage('en')" title="English">EN</button>
+        </div>
 
-        <section class="summary">
-            <p>
-                Senior AI developer with more than 5 years of experience in research and development and application of enterprise software in areas such as: Artificial Intelligence (AI) and Internet of Things (IOT). Use of skills and experience gained in research and use of design models for applications in activity detection in video, audio and image processing with Tensorflow, Keras and Pytorch to evaluate the highest standards and optimizations to create standards. Innovative and advanced business solutions with high teamwork to help others and teammates. Job objective development and implementation of innovative and practical projects based on AI and IOT.
-            </p>
-        </section>
-
-        <section>
-            <h2>PROFESSIONAL EXPERIENCE</h2>
+        <div id="content-fa" class="content active">
+            <header>
+                <img class="profile-picture" src="40795087.png" alt="عکس پروفایل امیرمحمد احمدی">
+                <h1>امیرمحمد احمدی</h1>
+                <div class="contact-info">
+                    <a href="tel:+989330673103">۰۹۳۳۰۶۷۳۱۰۳ <i class="fas fa-phone"></i></a>
+                    <a href="mailto:amir.mo.ahmadi@gmail.com">amir.mo.ahmadi@gmail.com <i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/amirmohamadahmadi" target="_blank">linkedin.com/in/amirmohamadahmadi <i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/AhmadiAmirmohammad" target="_blank">github.com/AhmadiAmirmohammad <i class="fab fa-github"></i></a>
+                </div>
+            </header>
             
-            <div class="job-entry">
-                <div class="job-title">
-                    <h3>MPJ, Isfahan, IR</h3>
-                    <span>July 2022 – Present</span>
-                </div>
-                <h4>Senior AI developer , <small>Onsite (Full time)</small></h4>
-                <ul>
-                    <li>Led the artificial intelligence department of the MPJ Industries Group's R&D (IoT) unit, which has more than 2 employees in 3 departments including video, audio, image and text processing.</li>
-                    <li>Planning and implementation of 4 demos for fire detection, optimization of electricity consumption at home, recognition of human activities from video and recognition of Persian command voice with Tensorflow and Keras.</li>
-                    <li>Holding technical training courses for the company's employees (internship) with the concepts of image and video processing, neural networks, convolutional neural networks, transformers with Tensorflow and Keras more than 360 hours of lectures and implementation.</li>
-                </ul>
-            </div>
-
-            <div class="job-entry">
-                <div class="job-title">
-                    <h3>Senior Researcher , <small>Onsite (Full time)</small></h3>
-                    <span>July 2022 – Present</span>
-                </div>
-                <ul>
-                    <li>Researcher of Electronics and Internet of Things research and development unit and interface between hardware and software department of MPJ Industries Group, which has more than 25 employees in 5 departments including R&D, UI/UX, hardware, software and artificial intelligence.</li>
-                    <li>Providing solutions for optimal use of hardware and increasing business sales efficiency by more than 20%.</li>
-                    <li>Developer of the hood, split, duct split, thermostat, touch keys and scenario control system with communication protocols including: Modbus RTU, Zigbee, IR on hardware modules including: Raspberry Pi, Rock Pi, Arduino.</li>
-                    <li>Organization of the implementation project of integrated software and hardware at commercial level with Java.</li>
-                    <li>Evaluated the process of recruiting and holding training courses for the technical improvement of the company's employees and trainees (internships) by lecturing more than 360 training hours.</li>
-                </ul>
-            </div>
-            
-            <div class="job-entry">
-                <div class="job-title">
-                    <h3>Java/Kotlin Developer</h3>
-                    <span>July 2022 – Present</span>
-                </div>
-                <ul>
-                    <li>Using special C++ libraries to use small screen and smart touch panel hardware ports with Android operating system in 6 months.</li>
-                    <li>Presenting the Android demo program and attracting the attention of the CEO and gaining points and investment for the commercialization of products with the aim of localizing the software platform.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>EDUCATION</h2>
-            
-            <div class="education-entry">
-                <div class="education-title">
-                    <h3>University of Semnan, Faculty of Electrical and Computer Engineering, IR</h3>
-                    <span>2020 – 2024</span>
-                </div>
-                <ul>
-                    <li><strong>M.Sc. in Artificial intelligence Engineering</strong></li>
-                    <li><strong>Thesis title:</strong> Abnormal human action recognition using deep learning</li>
-                    <li><strong>Article tittle:</strong> A Transformer-based model for abnormal activity recognition in video</li>
-                </ul>
-            </div>
-
-            <div class="education-entry">
-                <div class="education-title">
-                    <h3>University of Sheikh Bahaei University, Faculty of Computer Engineering, IR</h3>
-                    <span>2015 – 2019</span>
-                </div>
-                <ul>
-                    <li><strong>B.Sc. in Computer Software Engineering</strong></li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>SKILLS & OTHER</h2>
-            
-            <h3>Tutor:</h3>
-            <div class="tutor-entry">
-                <div class="tutor-title">
-                    <h4>AI programming with python Tutor, Isfahan, IR</h4>
-                    <span>2024 – present</span>
-                </div>
-                <ul>
-                    <li>Artificial intelligence programming Tutor with Python focusing on deep learning models privately for 3+ students</li>
-                </ul>
-            </div>
-            
-            <div class="tutor-entry">
-                <div class="tutor-title">
-                    <h4>Beginner to Advanced python Tutor, Isfahan, IR</h4>
-                    <span>2022 – present</span>
-                </div>
-                <ul>
-                    <li>Introductory-advanced Python programming Tutor privately for 5+ students</li>
-                </ul>
-            </div>
-
-            <div class="tutor-entry">
-                <div class="tutor-title">
-                    <h4>Principles of thesis and essay writing, Semnan, IR</h4>
-                    <span>2024</span>
-                </div>
-                <ul>
-                    <li>Instructor of working with Word and PowerPoint software, focusing on writing thesis and scientific articles and presenting them</li>
-                </ul>
-            </div>
-
-            <h3>Skills:</h3>
-            <ul class="skills-list">
-                <li>AI Frameworks: Tensorflow, Keras and Pytorch</li>
-                <li>AI Libraries: MediaPipe, Numpy, Pandas, OpenCV, Matplotlib, Scikit-learn</li>
-                <li>IDE Tools AI: Pycharm, Anaconda, Google colab</li>
-                <li>DevOps: Git, GitHub Actions, GitLab, Docker, Jira</li>
-                <li>Programming concepts: Algorithms, Data Structures, OOP</li>
-                <li>Programming language: Python, Lua, Java and C++</li>
-                <li>Documentation: Confluence, Markdown language</li>
-                <li>Learning: Taking the IELTS English course, Android Kotlin programming course</li>
-            </ul>
-        </section>
+            <section class="summary">
+                <p>
+                    توسعه‌دهنده ارشد هوش مصنوعی با بیش از ۵ سال تجربه در تحقیق و توسعه و کاربرد نرم‌افزارهای سازمانی در زمینه‌هایی مانند هوش مصنوعی (AI) و اینترنت اشیا (IOT). استفاده از مهارت‌ها و تجربه‌های کسب‌شده در تحقیق و استفاده از مدل‌های طراحی برای کاربرد در تشخیص فعالیت در ویدئو، پردازش صدا و تصویر با استفاده از Tensorflow، Keras و Pytorch برای ارزیابی بالاترین استانداردها و بهینه‌سازی‌ها جهت ایجاد راه‌حل‌های تجاری نوآورانه و پیشرفته با کار تیمی بالا برای کمک به همکاران. هدف شغلی: توسعه و پیاده‌سازی پروژه‌های نوآورانه و کاربردی مبتنی بر هوش مصنوعی و اینترنت اشیا.
+                </p>
+            </section>
         
-        <section>
-            <h2>Certificates</h2>
-            <div class="certificates-container">
-                <div class="certificate-item">
-                    <img src="certificate1.jpg" alt="Certificate 1">
+            <section>
+                <h2>تجربه کاری</h2>
+                
+                <div class="job-entry">
+                    <div class="job-title">
+                        <h3>MPJ، اصفهان، ایران</h3>
+                        <span>تیر ۱۴۰۱ – اکنون</span>
+                    </div>
+                    <h4>توسعه‌دهنده ارشد هوش مصنوعی <small>حضوری (تمام وقت)</small></h4>
+                    <ul>
+                        <li>رهبری بخش هوش مصنوعی واحد تحقیق و توسعه (IoT) گروه صنایع MPJ که بیش از ۲ نفر کارمند در ۳ دپارتمان شامل پردازش ویدئو، صدا، تصویر و متن دارد.</li>
+                        <li>برنامه‌ریزی و پیاده‌سازی ۴ دمو برای تشخیص آتش، بهینه‌سازی مصرف برق در خانه، تشخیص فعالیت‌های انسانی از ویدئو و تشخیص صدای فرمان فارسی با Tensorflow و Keras.</li>
+                        <li>برگزاری دوره‌های آموزشی فنی برای کارکنان شرکت (کارآموزان) با مفاهیم پردازش تصویر و ویدئو، شبکه‌های عصبی، شبکه‌های عصبی کانولوشنی، ترنسفورمرها با Tensorflow و Keras بیش از ۳۶۰ ساعت سخنرانی و پیاده‌سازی.</li>
+                    </ul>
                 </div>
-                <div class="certificate-item">
-                    <img src="certificate2.jpg" alt="Certificate 2">
+        
+                <div class="job-entry">
+                    <div class="job-title">
+                        <h3>محقق ارشد <small>حضوری (تمام وقت)</small></h3>
+                        <span>تیر ۱۴۰۱ – اکنون</span>
+                    </div>
+                    <ul>
+                        <li>محقق واحد تحقیق و توسعه الکترونیک و اینترنت اشیا و رابط بین دپارتمان سخت‌افزار و نرم‌افزار گروه صنایع MPJ که بیش از ۲۵ نفر کارمند در ۵ دپارتمان شامل تحقیق و توسعه، UI/UX، سخت‌افزار، نرم‌افزار و هوش مصنوعی دارد.</li>
+                        <li>ارائه راه‌حل برای استفاده بهینه از سخت‌افزار و افزایش کارایی فروش کسب‌وکار تا بیش از ۲۰٪.</li>
+                        <li>توسعه‌دهنده سیستم کنترل هود، اسپلیت، داکت اسپلیت، ترموستات، کلیدهای لمسی و سناریو با پروتکل‌های ارتباطی شامل: Modbus RTU، Zigbee، IR بر روی ماژول‌های سخت‌افزاری شامل: Raspberry Pi، Rock Pi، Arduino.</li>
+                        <li>سازماندهی پروژه پیاده‌سازی نرم‌افزار و سخت‌افزار یکپارچه در سطح تجاری با Java.</li>
+                        <li>ارزیابی فرآیند جذب و برگزاری دوره‌های آموزشی برای بهبود فنی کارکنان و کارآموزان شرکت با سخنرانی بیش از ۳۶۰ ساعت آموزشی.</li>
+                    </ul>
                 </div>
-                <div class="certificate-item">
-                    <img src="certificate3.jpg" alt="Certificate 3">
+                
+                <div class="job-entry">
+                    <div class="job-title">
+                        <h3>توسعه‌دهنده Java/Kotlin</h3>
+                        <span>تیر ۱۴۰۱ – اکنون</span>
+                    </div>
+                    <ul>
+                        <li>استفاده از کتابخانه‌های C++ ویژه برای استفاده از پورت‌های سخت‌افزاری صفحه نمایش کوچک و پنل لمسی هوشمند با سیستم عامل اندروید در مدت ۶ ماه.</li>
+                        <li>ارائه برنامه دموی اندروید و جلب توجه مدیرعامل و کسب امتیاز و سرمایه‌گذاری برای تجاری‌سازی محصولات با هدف بومی‌سازی پلتفرم نرم‌افزاری.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
+            </section>
+        
+            <section>
+                <h2>تحصیلات</h2>
+                
+                <div class="education-entry">
+                    <div class="education-title">
+                        <h3>دانشگاه سمنان، دانشکده مهندسی برق و کامپیوتر، ایران</h3>
+                        <span>۱۳۹۹ – ۱۴۰۳</span>
+                    </div>
+                    <ul>
+                        <li><strong>کارشناسی ارشد مهندسی هوش مصنوعی</strong></li>
+                        <li><strong>عنوان پایان‌نامه:</strong> تشخیص فعالیت غیرعادی انسان با استفاده از یادگیری عمیق</li>
+                        <li><strong>عنوان مقاله:</strong> A Transformer-based model for abnormal activity recognition in video</li>
+                    </ul>
+                </div>
+        
+                <div class="education-entry">
+                    <div class="education-title">
+                        <h3>دانشگاه شیخ بهائی، دانشکده مهندسی کامپیوتر، ایران</h3>
+                        <span>۱۳۹۴ – ۱۳۹۸</span>
+                    </div>
+                    <ul>
+                        <li><strong>کارشناسی مهندسی نرم‌افزار کامپیوتر</strong></li>
+                    </ul>
+                </div>
+            </section>
+        
+            <section>
+                <h2>مهارت‌ها و موارد دیگر</h2>
+                
+                <h3>تدریس:</h3>
+                <div class="tutor-entry">
+                    <div class="tutor-title">
+                        <h4>مدرس برنامه‌نویسی هوش مصنوعی با پایتون، اصفهان، ایران</h4>
+                        <span>۱۴۰۲ – اکنون</span>
+                    </div>
+                    <ul>
+                        <li>مدرس برنامه‌نویسی هوش مصنوعی با پایتون با تمرکز بر مدل‌های یادگیری عمیق به صورت خصوصی برای ۳+ دانش‌آموز</li>
+                    </ul>
+                </div>
+                
+                <div class="tutor-entry">
+                    <div class="tutor-title">
+                        <h4>مدرس برنامه‌نویسی پایتون مقدماتی تا پیشرفته، اصفهان، ایران</h4>
+                        <span>۱۴۰۱ – اکنون</span>
+                    </div>
+                    <ul>
+                        <li>مدرس برنامه‌نویسی پایتون مقدماتی تا پیشرفته به صورت خصوصی برای ۵+ دانش‌آموز</li>
+                    </ul>
+                </div>
+        
+                <div class="tutor-entry">
+                    <div class="tutor-title">
+                        <h4>اصول پایان‌نامه‌نویسی و مقاله‌نویسی، سمنان، ایران</h4>
+                        <span>۱۴۰۲</span>
+                    </div>
+                    <ul>
+                        <li>مدرس کار با نرم‌افزار ورد و پاورپوینت با تمرکز بر نگارش پایان‌نامه و مقالات علمی و ارائه آن‌ها</li>
+                    </ul>
+                </div>
+        
+                <h3>مهارت‌ها:</h3>
+                <ul class="skills-list">
+                    <li>فریمورک‌های هوش مصنوعی: Tensorflow, Keras and Pytorch</li>
+                    <li>کتابخانه‌های هوش مصنوعی: MediaPipe, Numpy, Pandas, OpenCV, Matplotlib, Scikit-learn</li>
+                    <li>ابزارهای IDE هوش مصنوعی: Pycharm, Anaconda, Google colab</li>
+                    <li>DevOps: Git, GitHub Actions, GitLab, Docker, Jira</li>
+                    <li>مفاهیم برنامه‌نویسی: Algorithms, Data Structures, OOP</li>
+                    <li>زبان‌های برنامه‌نویسی: Python, Lua, Java and C++</li>
+                    <li>مستندسازی: Confluence, Markdown Language</li>
+                    <li>یادگیری: گذراندن دوره زبان انگلیسی آیلتس، دوره برنامه‌نویسی کاتلین اندروید</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Volunteering</h2>
-            <p>Volunteered as a tutor for youngsters on welfare in programming classes and Writing theses and articles with Word software (2019, 2023-4)</p>
-        </section>
+            <section>
+                <h2>گواهینامه‌ها</h2>
+                <div class="certificates-container">
+                    <div class="certificate-item">
+                        <img src="certificate1.jpg" alt="گواهینامه ۱">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="certificate2.jpg" alt="گواهینامه ۲">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="certificate3.jpg" alt="گواهینامه ۳">
+                    </div>
+                </div>
+            </section>
+        
+            <section>
+                <h2>فعالیت‌های داوطلبانه</h2>
+                <p>داوطلب به عنوان مدرس برای نوجوانان تحت پوشش بهزیستی در کلاس‌های برنامه‌نویسی و نگارش پایان‌نامه و مقالات با نرم‌افزار ورد (۱۳۹۸، ۱۴۰۲-۳)</p>
+            </section>
+        </div>
+
+        <div id="content-en" class="content">
+            <header>
+                <img class="profile-picture" src="40795087.png" alt="Amirmohamad Ahmadi Profile Picture">
+                <h1>AMIRMOHAMAD AHMADI</h1>
+                <div class="contact-info">
+                    <a href="tel:+989330673103"><i class="fas fa-phone"></i> +98 9330673103</a>
+                    <a href="mailto:amir.mo.ahmadi@gmail.com"><i class="fas fa-envelope"></i> amir.mo.ahmadi@gmail.com</a>
+                    <a href="https://linkedin.com/in/amirmohamadahmadi" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/amirmohamadahmadi</a>
+                    <a href="https://github.com/AhmadiAmirmohammad" target="_blank"><i class="fab fa-github"></i> github.com/AhmadiAmirmohammad</a>
+                </div>
+            </header>
+
+            <section class="summary">
+                <p>
+                    Senior AI developer with more than 5 years of experience in research and development and application of enterprise software in areas such as: Artificial Intelligence (AI) and Internet of Things (IOT). Use of skills and experience gained in research and use of design models for applications in activity detection in video, audio and image processing with Tensorflow, Keras and Pytorch to evaluate the highest standards and optimizations to create standards. Innovative and advanced business solutions with high teamwork to help others and teammates. Job objective development and implementation of innovative and practical projects based on AI and IOT.
+                </p>
+            </section>
+
+            <section>
+                <h2>PROFESSIONAL EXPERIENCE</h2>
+                
+                <div class="job-entry">
+                    <div class="job-title">
+                        <h3>MPJ, Isfahan, IR</h3>
+                        <span>July 2022 – Present</span>
+                    </div>
+                    <h4>Senior AI developer , <small>Onsite (Full time)</small></h4>
+                    <ul>
+                        <li>Led the artificial intelligence department of the MPJ Industries Group's R&D (IoT) unit, which has more than 2 employees in 3 departments including video, audio, image and text processing.</li>
+                        <li>Planning and implementation of 4 demos for fire detection, optimization of electricity consumption at home, recognition of human activities from video and recognition of Persian command voice with Tensorflow and Keras.</li>
+                        <li>Holding technical training courses for the company's employees (internship) with the concepts of image and video processing, neural networks, convolutional neural networks, transformers with Tensorflow and Keras more than 360 hours of lectures and implementation.</li>
+                    </ul>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-title">
+                        <h3>Senior Researcher , <small>Onsite (Full time)</small></h3>
+                        <span>July 2022 – Present</span>
+                    </div>
+                    <ul>
+                        <li>Researcher of Electronics and Internet of Things research and development unit and interface between hardware and software department of MPJ Industries Group, which has more than 25 employees in 5 departments including R&D, UI/UX, hardware, software and artificial intelligence.</li>
+                        <li>Providing solutions for optimal use of hardware and increasing business sales efficiency by more than 20%.</li>
+                        <li>Developer of the hood, split, duct split, thermostat, touch keys and scenario control system with communication protocols including: Modbus RTU, Zigbee, IR on hardware modules including: Raspberry Pi, Rock Pi, Arduino.</li>
+                        <li>Organization of the implementation project of integrated software and hardware at commercial level with Java.</li>
+                        <li>Evaluated the process of recruiting and holding training courses for the technical improvement of the company's employees and trainees (internships) by lecturing more than 360 training hours.</li>
+                    </ul>
+                </div>
+                
+                <div class="job-entry">
+                    <div class="job-title">
+                        <h3>Java/Kotlin Developer</h3>
+                        <span>July 2022 – Present</span>
+                    </div>
+                    <ul>
+                        <li>Using special C++ libraries to use small screen and smart touch panel hardware ports with Android operating system in 6 months.</li>
+                        <li>Presenting the Android demo program and attracting the attention of the CEO and gaining points and investment for the commercialization of products with the aim of localizing the software platform.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>EDUCATION</h2>
+                
+                <div class="education-entry">
+                    <div class="education-title">
+                        <h3>University of Semnan, Faculty of Electrical and Computer Engineering, IR</h3>
+                        <span>2020 – 2024</span>
+                    </div>
+                    <ul>
+                        <li><strong>M.Sc. in Artificial intelligence Engineering</strong></li>
+                        <li><strong>Thesis title:</strong> Abnormal human action recognition using deep learning</li>
+                        <li><strong>Article tittle:</strong> A Transformer-based model for abnormal activity recognition in video</li>
+                    </ul>
+                </div>
+
+                <div class="education-entry">
+                    <div class="education-title">
+                        <h3>University of Sheikh Bahaei University, Faculty of Computer Engineering, IR</h3>
+                        <span>2015 – 2019</span>
+                    </div>
+                    <ul>
+                        <li><strong>B.Sc. in Computer Software Engineering</strong></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>SKILLS & OTHER</h2>
+                
+                <h3>Tutor:</h3>
+                <div class="tutor-entry">
+                    <div class="tutor-title">
+                        <h4>AI programming with python Tutor, Isfahan, IR</h4>
+                        <span>2024 – present</span>
+                    </div>
+                    <ul>
+                        <li>Artificial intelligence programming Tutor with Python focusing on deep learning models privately for 3+ students</li>
+                    </ul>
+                </div>
+                
+                <div class="tutor-entry">
+                    <div class="tutor-title">
+                        <h4>Beginner to Advanced python Tutor, Isfahan, IR</h4>
+                        <span>2022 – present</span>
+                    </div>
+                    <ul>
+                        <li>Introductory-advanced Python programming Tutor privately for 5+ students</li>
+                    </ul>
+                </div>
+
+                <div class="tutor-entry">
+                    <div class="tutor-title">
+                        <h4>Principles of thesis and essay writing, Semnan, IR</h4>
+                        <span>2024</span>
+                    </div>
+                    <ul>
+                        <li>مدرس کار با نرم‌افزار ورد و پاورپوینت با تمرکز بر نگارش پایان‌نامه و مقالات علمی و ارائه آن‌ها</li>
+                    </ul>
+                </div>
+
+                <h3>Skills:</h3>
+                <ul class="skills-list">
+                    <li>AI Frameworks: Tensorflow, Keras and Pytorch</li>
+                    <li>AI Libraries: MediaPipe, Numpy, Pandas, OpenCV, Matplotlib, Scikit-learn</li>
+                    <li>IDE Tools AI: Pycharm, Anaconda, Google colab</li>
+                    <li>DevOps: Git, GitHub Actions, GitLab, Docker, Jira</li>
+                    <li>Programming concepts: Algorithms, Data Structures, OOP</li>
+                    <li>Programming language: Python, Lua, Java and C++</li>
+                    <li>Documentation: Confluence, Markdown Language</li>
+                    <li>Learning: Taking the IELTS English course, Android Kotlin programming course</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Certificates</h2>
+                <div class="certificates-container">
+                    <div class="certificate-item">
+                        <img src="certificate1.jpg" alt="Certificate 1">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="certificate2.jpg" alt="Certificate 2">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="certificate3.jpg" alt="Certificate 3">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Volunteering</h2>
+                <p>داوطلب به عنوان مدرس برای نوجوانان تحت پوشش بهزیستی در کلاس‌های برنامه‌نویسی و نگارش پایان‌نامه و مقالات با نرم‌افزار ورد (۱۳۹۸، ۱۴۰۲-۳)</p>
+            </section>
+        </div>
     </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const faContent = document.getElementById('content-fa');
+            const enContent = document.getElementById('content-en');
+            const body = document.body;
+            const faBtn = document.getElementById('lang-fa-btn');
+            const enBtn = document.getElementById('lang-en-btn');
+
+            if (lang === 'fa') {
+                faContent.classList.add('active');
+                enContent.classList.remove('active');
+                body.classList.remove('fa-en');
+                body.classList.add('fa-fa');
+                body.setAttribute('lang', 'fa');
+                body.setAttribute('dir', 'rtl');
+                faBtn.classList.add('active-lang');
+                enBtn.classList.remove('active-lang');
+            } else {
+                enContent.classList.add('active');
+                faContent.classList.remove('active');
+                body.classList.remove('fa-fa');
+                body.classList.add('fa-en');
+                body.setAttribute('lang', 'en');
+                body.setAttribute('dir', 'ltr');
+                enBtn.classList.add('active-lang');
+                faBtn.classList.remove('active-lang');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLanguage('fa'); // Set default to Farsi
+        });
+    </script>
 
 </body>
 </html>
