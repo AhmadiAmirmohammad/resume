@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,13 +21,13 @@
         }
 
         body {
-            font-family: 'Vazirmatn', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 20px;
             background-color: var(--background-color);
             color: var(--primary-color);
             line-height: 1.6;
-            direction: rtl; /* Default to RTL */
+            direction: ltr; /* Default to LTR */
         }
 
         .container {
@@ -265,14 +265,14 @@
         }
     </style>
 </head>
-<body class="fa-fa" dir="rtl">
+<body class="fa-en" dir="ltr">
     <div class="container">
         <div id="lang-switcher">
             <button id="lang-fa-btn" onclick="switchLanguage('fa')" title="فارسی">FA</button>
             <button id="lang-en-btn" onclick="switchLanguage('en')" title="English">EN</button>
         </div>
 
-        <div id="content-fa" class="content active">
+        <div id="content-fa" class="content">
             <header>
                 <img class="profile-picture" src="40795087.png" alt="عکس پروفایل امیرمحمد احمدی">
                 <h1>امیرمحمد احمدی</h1>
@@ -426,7 +426,7 @@
             </section>
         </div>
 
-        <div id="content-en" class="content">
+        <div id="content-en" class="content active">
             <header>
                 <img class="profile-picture" src="40795087.png" alt="Amirmohamad Ahmadi Profile Picture">
                 <h1>AMIRMOHAMAD AHMADI</h1>
@@ -542,7 +542,7 @@
                         <span>2024</span>
                     </div>
                     <ul>
-                        <li>مدرس کار با نرم‌افزار ورد و پاورپوینت با تمرکز بر نگارش پایان‌نامه و مقالات علمی و ارائه آن‌ها</li>
+                        <li>Instructor of working with Word and PowerPoint software, focusing on writing thesis and scientific articles and presenting them</li>
                     </ul>
                 </div>
 
@@ -554,7 +554,7 @@
                     <li>DevOps: Git, GitHub Actions, GitLab, Docker, Jira</li>
                     <li>Programming concepts: Algorithms, Data Structures, OOP</li>
                     <li>Programming language: Python, Lua, Java and C++</li>
-                    <li>Documentation: Confluence, Markdown Language</li>
+                    <li>Documentation: Confluence, Markdown language</li>
                     <li>Learning: Taking the IELTS English course, Android Kotlin programming course</li>
                 </ul>
             </section>
@@ -576,7 +576,7 @@
 
             <section>
                 <h2>Volunteering</h2>
-                <p>داوطلب به عنوان مدرس برای نوجوانان تحت پوشش بهزیستی در کلاس‌های برنامه‌نویسی و نگارش پایان‌نامه و مقالات با نرم‌افزار ورد (۱۳۹۸، ۱۴۰۲-۳)</p>
+                <p>Volunteered as a tutor for youngsters on welfare in programming classes and Writing theses and articles with Word software (2019, 2023-4)</p>
             </section>
         </div>
     </div>
@@ -611,7 +611,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            switchLanguage('fa'); // Set default to Farsi
+            switchLanguage('en'); // Set default to English
         });
     </script>
 
