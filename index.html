@@ -152,6 +152,29 @@
             font-size: 0.9rem;
         }
 
+        .certificates-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 15px;
+        }
+
+        .certificate-item {
+            flex: 1 1 280px; /* این خط باعث می‌شود تصاویر ریسپانسیو شوند */
+            max-width: 300px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 8px;
+            background-color: var(--background-color);
+        }
+
+        .certificate-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
         @media (max-width: 600px) {
             .container {
                 padding: 15px;
@@ -305,8 +328,25 @@
                 <li>Documentation: Confluence, Markdown language</li>
                 <li>Learning: Taking the IELTS English course, Android Kotlin programming course</li>
             </ul>
+        </section>
+        
+        <section>
+            <h2>Certificates</h2>
+            <div class="certificates-container">
+                <div class="certificate-item">
+                    <img src="certificate1.jpg" alt="Certificate 1">
+                </div>
+                <div class="certificate-item">
+                    <img src="certificate2.jpg" alt="Certificate 2">
+                </div>
+                <div class="certificate-item">
+                    <img src="certificate3.jpg" alt="Certificate 3">
+                </div>
+            </div>
+        </section>
 
-            <h3>Volunteering:</h3>
+        <section>
+            <h2>Volunteering</h2>
             <p>Volunteered as a tutor for youngsters on welfare in programming classes and Writing theses and articles with Word software (2019, 2023-4)</p>
         </section>
     </div>
