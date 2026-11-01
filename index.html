@@ -93,7 +93,8 @@
             margin-top: 10px;
         }
 
-        header .contact-info a {
+        header .contact-info a,
+        header .contact-info span {
             color: var(--secondary-color);
             text-decoration: none;
             display: flex;
@@ -105,16 +106,19 @@
             color: var(--link-hover-color);
         }
 
-        header .contact-info a i {
+        header .contact-info a i,
+        header .contact-info span i {
             font-size: 1.2rem;
         }
         
-        body.fa-fa .contact-info a i { 
+        body.fa-fa .contact-info a i,
+        body.fa-fa .contact-info span i { 
             margin-left: 5px; 
             margin-right: 0; 
         }
 
-        body.fa-en .contact-info a i { 
+        body.fa-en .contact-info a i,
+        body.fa-en .contact-info span i { 
             margin-right: 5px; 
             margin-left: 0; 
         }
@@ -157,6 +161,26 @@
             font-style: italic;
             color: var(--secondary-color);
             font-size: 0.9rem;
+        }
+
+        .job-title h3 a, .education-title h3 a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dotted var(--secondary-color);
+        }
+
+        .job-title h3 a:hover, .education-title h3 a:hover {
+            color: var(--link-hover-color);
+        }
+
+        .job-role {
+            margin: 0 0 5px;
+            font-size: 1.05rem;
+        }
+
+        .job-role small {
+            font-weight: normal;
+            color: var(--secondary-color);
         }
 
         ul {
@@ -277,111 +301,123 @@
                 <img class="profile-picture" src="picofme.png" alt="عکس پروفایل امیرمحمد احمدی">
                 <h1>امیرمحمد احمدی</h1>
                 <div class="contact-info">
+                    <span>اصفهان، ایران <i class="fas fa-location-dot"></i></span>
                     <a href="tel:+989330673103">۰۹۳۳۰۶۷۳۱۰۳ <i class="fas fa-phone"></i></a>
                     <a href="mailto:amir.mo.ahmadi@gmail.com">amir.mo.ahmadi@gmail.com <i class="fas fa-envelope"></i></a>
                     <a href="https://linkedin.com/in/amirmohamadahmadi" target="_blank">linkedin.com/in/amirmohamadahmadi <i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/AhmadiAmirmohammad" target="_blank">github.com/AhmadiAmirmohammad <i class="fab fa-github"></i></a>
                 </div>
             </header>
-            
+
             <section class="summary">
                 <p>
-                    توسعه‌دهنده ارشد هوش مصنوعی با بیش از ۵ سال تجربه در تحقیق و توسعه و کاربرد نرم‌افزارهای سازمانی در زمینه‌هایی مانند هوش مصنوعی (AI) و اینترنت اشیا (IOT). استفاده از مهارت‌ها و تجربه‌های کسب‌شده در تحقیق و استفاده از مدل‌های طراحی برای کاربرد در تشخیص فعالیت در ویدئو، پردازش صدا و تصویر با استفاده از Tensorflow، Keras و Pytorch برای ارزیابی بالاترین استانداردها و بهینه‌سازی‌ها جهت ایجاد راه‌حل‌های تجاری نوآورانه و پیشرفته با کار تیمی بالا برای کمک به همکاران. هدف شغلی: توسعه و پیاده‌سازی پروژه‌های نوآورانه و کاربردی مبتنی بر هوش مصنوعی و اینترنت اشیا.
+                    توسعه‌دهنده ارشد هوش مصنوعی و اینترنت اشیا (IoT) با بیش از ۵ سال تجربه در تحقیق و توسعه و استفاده از نرم‌افزارهای سازمانی در زمینه‌هایی مانند هوش مصنوعی (AI) و اینترنت اشیا. بهره‌گیری از مهارت‌ها و تجربه‌های به‌دست‌آمده در تحقیق برای کاربردهای تشخیص فعالیت در ویدئو و پردازش صدا و تصویر با TensorFlow، Keras و PyTorch. ارائه راه‌حل‌های تجاری نوآورانه و پیشرفته با روحیه کار تیمی بالا برای کمک به دیگران و هم‌تیمی‌ها. هدف شغلی: توسعه و اجرای پروژه‌های نوآورانه و عملی مبتنی بر هوش مصنوعی و اینترنت اشیا.
                 </p>
             </section>
-        
+
             <section>
                 <h2>تجربه کاری</h2>
-                
+
                 <div class="job-entry">
                     <div class="job-title">
-                        <h3>MPJ، اصفهان، ایران</h3>
-                        <span>تیر ۱۴۰۱ – اکنون</span>
+                        <h3><a href="https://mpjgroup.co/en/" target="_blank">سیماکابل نقش جهان</a>، اصفهان، ایران</h3>
+                        <span>آذر ۱۴۰۳ – آذر ۱۴۰۵</span>
                     </div>
-                    <h3>توسعه‌دهنده ارشد هوش مصنوعی <small>حضوری (تمام وقت)</small></h4>
+                    <h4 class="job-role">توسعه‌دهنده ارشد هوش مصنوعی و میکروکنترلر <small>در محل (تمام وقت)</small></h4>
                     <ul>
-                        <li>رهبری بخش هوش مصنوعی واحد تحقیق و توسعه (IoT) گروه صنایع MPJ که بیش از ۲ نفر کارمند در ۳ دپارتمان شامل پردازش ویدئو، صدا، تصویر و متن دارد.</li>
-                        <li>برنامه‌ریزی و پیاده‌سازی ۴ دمو برای تشخیص آتش، بهینه‌سازی مصرف برق در خانه، تشخیص فعالیت‌های انسانی از ویدئو و تشخیص صدای فرمان فارسی با Tensorflow و Keras.</li>
-                        <li>برگزاری دوره‌های آموزشی فنی برای کارکنان شرکت (کارآموزان) با مفاهیم پردازش تصویر و ویدئو، شبکه‌های عصبی، شبکه‌های عصبی کانولوشنی، ترنسفورمرها با Tensorflow و Keras بیش از ۳۶۰ ساعت سخنرانی و پیاده‌سازی.</li>
+                        <li>توسعه اکوسیستم یکپارچه خانه هوشمند را بر پایه دانش میکروکنترلر و با برنامه‌نویسی ESP32-WROOM، ایزولاسیون اپتوکوپلر و پروتکل Wi-Fi رهبری کردم که منجر به ارائه ۷ محصول جدید IoT و افزایش ۲۵٪ سبد خدمات شرکت شد.</li>
+                        <li>دستگاه‌های هشدار ایمنی شامل نشت‌یاب آب (با سنسورهای رطوبت و جریان) و نشت‌یاب گاز و دود (با سنسورهای گاز و دود) را توسعه دادم که با ارتباط JSON به Message Broker و فعال‌سازی رله، خسارات مالی و جانی را ۳۰٪ کاهش داد.</li>
+                        <li>دستگاه اندازه‌گیری دمای غیرتماسی (ThermoScan Optimizer) را با سنسور مادون قرمز برای بهینه‌سازی مصرف انرژی توسعه دادم که ۱۵٪ کاهش مصرف سیستم‌های گرمایشی را به همراه داشت و داده‌های نقشه حرارتی را به Message Broker ارسال می‌کرد.</li>
+                        <li>مجموعه رله‌های هوشمند (تک‌کانال پکیج، ۳ کانال کولر آبی، ۴ کانال پرده برقی و رله IO) را با طراحی مودهای ثابت، لحظه‌ای، تاگل و اتوماسیون پیاده‌سازی کردم که کنترل دقیق و سناریومحور تجهیزات را ممکن ساخت.</li>
+                        <li>مدل یادگیری عمیق برای تشخیص اعمال غیرنرمال (درگیری و زمین‌خوردن) را با استفاده از دیتاست‌های SPHAR و UCF-Crime، تکنیک‌های Data Augmentation و ابزارهای OpenPose و MediaPipe توسعه دادم که به دقت بالای ۷۰٪ دست یافت.</li>
+                        <li>سرویس تشخیص فرمان صوتی فارسی را به‌صورت دمو و با استخراج ویژگی‌های صوتی و بهره‌گیری از TensorFlow و Keras پیاده‌سازی کردم که قابلیت اتصال به اکوسیستم IoT را فراهم کرد.</li>
+                        <li>قابلیت اتصال و پخش زنده دوربین‌های IP (RJ45) را در نرم‌افزار MPJLink با پروتکل RTSP و بهینه‌سازی تأخیر (Latency) پیاده‌سازی کردم که نظارت امنیتی لوکال و ریموت را ممکن ساخت و با پاسخگویی به نیازهای مشتری، افزایش ۲۰ درصدی خدمات و محصولات شرکت را به همراه داشت.</li>
                     </ul>
                 </div>
-        
+
                 <div class="job-entry">
                     <div class="job-title">
-                        <h3>محقق ارشد <small>حضوری (تمام وقت)</small></h3>
-                        <span>تیر ۱۴۰۱ – اکنون</span>
+                        <h3><a href="https://mpjgroup.co/en/" target="_blank">سیماکابل نقش جهان</a>، اصفهان، ایران</h3>
+                        <span>مرداد ۱۴۰۲ – آبان ۱۴۰۳</span>
                     </div>
+                    <h4 class="job-role">پژوهشگر و توسعه‌دهنده هوش مصنوعی و IoT <small>در محل (تمام وقت)</small></h4>
                     <ul>
-                        <li>محقق واحد تحقیق و توسعه الکترونیک و اینترنت اشیا و رابط بین دپارتمان سخت‌افزار و نرم‌افزار گروه صنایع MPJ که بیش از ۲۵ نفر کارمند در ۵ دپارتمان شامل تحقیق و توسعه، UI/UX، سخت‌افزار، نرم‌افزار و هوش مصنوعی دارد.</li>
-                        <li>ارائه راه‌حل برای استفاده بهینه از سخت‌افزار و افزایش کارایی فروش کسب‌وکار تا بیش از ۲۰٪.</li>
-                        <li>توسعه‌دهنده سیستم کنترل هود، اسپلیت، داکت اسپلیت، ترموستات، کلیدهای لمسی و سناریو با پروتکل‌های ارتباطی شامل: Modbus RTU، Zigbee، IR بر روی ماژول‌های سخت‌افزاری شامل: Raspberry Pi، Rock Pi، Arduino.</li>
-                        <li>سازماندهی پروژه پیاده‌سازی نرم‌افزار و سخت‌افزار یکپارچه در سطح تجاری با Java.</li>
-                        <li>ارزیابی فرآیند جذب و برگزاری دوره‌های آموزشی برای بهبود فنی کارکنان و کارآموزان شرکت با سخنرانی بیش از ۳۶۰ ساعت آموزشی.</li>
+                        <li>سیستم‌های هوشمند خانگی و ساختمان را با یکپارچگی کامل پروتکل‌های Modbus RTU، Zigbee و IR و ارتباط بی‌سیم و بومی توسعه دادم؛ این نتیجه از طریق پیاده‌سازی Firmware و Embedded Software روی ماژول‌های Raspberry Pi، Rock Pi و Arduino و طراحی معماری IoT حاصل شد.</li>
+                        <li>اجاق گاز و هود IoT را با کار با API، Wi-Fi Manager، RESTful API و Message Broker توسعه دادم که افزایش حدود ۲۵٪ خدمات و محصولات شرکت را به همراه داشت.</li>
+                        <li>از طرح مسئله فناور با عنوان «سامانه سخت‌افزاری و نرم‌افزاری مبتنی بر IoT» جهت اخذ وضعیت دانش‌بنیان دفاع کردم که معافیت مالیاتی شرکت و کاهش حدود ۱۵٪ هزینه‌های شرکت را به دنبال داشت.</li>
+                        <li>نقش رابط بین بخش‌های R&D، UI/UX، Hardware، Software و AI و ارتباط با مشتریان را با بیش از ۱۲ کارمند ایفا کردم. با بکارگیری Scrum (Backlog Refinement، Sprint Planning و Daily Standup با Scrum Master، Technical Lead و Product Owner) و مستندسازی نیازمندی‌ها و مدیریت Product Backlog در Jira و Confluence، شفافیت پیشرفت، تحویل تدریجی و انطباق‌پذیری سریع با تغییر نیازمندی‌ها محقق شد.</li>
+                        <li>زمان هماهنگی بین‌تیمی را حدود ۳۰٪ کاهش دادم و دوباره‌کاری را به حداقل رساندم.</li>
+                        <li>با تحلیل مصرف منابع و بازطراحی ماژول‌های سخت‌افزاری، راهکارهای بهینه‌سازی سخت‌افزار ارائه دادم که راندمان فروش کسب‌وکار را بیش از ۲۰٪ افزایش داد.</li>
+                        <li>فرآیند جذب و آموزش ارتقای فنی کارکنان و کارآموزان را با طراحی مسیر یادگیری و ارزیابی شایستگی اجرا کردم و بیش از ۳۶۰ ساعت آموزش ارائه دادم. موضوعات شامل EEPROM، OTA، Message Broker، Multithreading، مادون قرمز (IR)، MQTT و RESTful API و همچنین CNN، TensorFlow، OpenPose، MediaPipe، Data Augmentation و Data Preprocessing بود.</li>
+                        <li>با بهره‌مندی از تسهیلات مرکز رشد و فناوری دانشگاه اصفهان، حدود ۵ کارآموز دانشجو جذب و پس از ارزیابی شایستگی، زمینه استخدام آن‌ها را فراهم کردم؛ رویکردی که به کاهش حدود ۲۰٪ هزینه اجاره دفتر نیز منجر شد.</li>
                     </ul>
                 </div>
-                
+
                 <div class="job-entry">
                     <div class="job-title">
-                        <h3>توسعه‌دهنده Java/Kotlin</h3>
-                        <span>تیر ۱۴۰۱ – اکنون</span>
+                        <h3><a href="https://mpjgroup.co/en/" target="_blank">شرکت جهان آرای اسپادانا</a>، اصفهان، ایران</h3>
+                        <span>مرداد ۱۴۰۱ – تیر ۱۴۰۲</span>
                     </div>
+                    <h4 class="job-role">پژوهشگر <small>در محل (تمام وقت)</small></h4>
                     <ul>
-                        <li>استفاده از کتابخانه‌های C++ ویژه برای استفاده از پورت‌های سخت‌افزاری صفحه نمایش کوچک و پنل لمسی هوشمند با سیستم عامل اندروید در مدت ۶ ماه.</li>
-                        <li>ارائه برنامه دموی اندروید و جلب توجه مدیرعامل و کسب امتیاز و سرمایه‌گذاری برای تجاری‌سازی محصولات با هدف بومی‌سازی پلتفرم نرم‌افزاری.</li>
+                        <li>راهکارهای موجود خانه هوشمند شامل تویا، سایتک، هموند و لینک‌اپ، پروتکل‌های استاندارد Modbus، Zigbee و Wi-Fi، گیت‌وی‌های Modbus و Zigbee و تاچ‌پنل‌های تویا (نمایشگر + گیت‌وی) را بررسی کردم. پس از بررسی نیازمندی‌ها، راهکارهایی برای توسعه سریع‌تر پشتیبانی از Modbus و Zigbee (حدود ۵۰٪) و کاهش حدود ۳۰٪ هزینه مشتریان ارائه دادم که مزیت رقابتی ایجاد کرد.</li>
+                        <li>دسترسی به پورت‌های سخت‌افزاری و کنترل ۲ نمایشگر جداگانه را با کتابخانه‌های C++ و لایه JNI روی پنل لمسی اندرویدی در ۴ ماه پیاده‌سازی کردم.</li>
+                        <li>راهکار MVP را برای ایرانی‌سازی و توسعه نرم‌افزار فارسی MPJ Link ارائه دادم که سرعت توسعه را حدود ۵۰٪ افزایش داد. با ارتقای قابلیت ارتباط با برندهای کلید و ترموستات Modbus، تعامل‌پذیری با برندهای دیگر حدود ۳۰٪ و اعتمادسازی و همکاری با کسب‌وکارهای دیگر حدود ۷۰٪ بهبود یافت؛ دستاوردی که جلب نظر مدیریت، کسب امتیاز و جذب سرمایه برای تجاری‌سازی و بومی‌سازی را به دنبال داشت.</li>
                     </ul>
                 </div>
             </section>
-        
+
             <section>
                 <h2>تحصیلات</h2>
-                
+
                 <div class="education-entry">
                     <div class="education-title">
-                        <h3>دانشگاه سمنان، دانشکده مهندسی برق و کامپیوتر، ایران</h3>
+                        <h3><a href="https://enece.semnan.ac.ir/" target="_blank">دانشگاه سمنان، دانشکده مهندسی برق و کامپیوتر</a>، ایران</h3>
                         <span>۱۳۹۹ – ۱۴۰۳</span>
                     </div>
                     <ul>
                         <li><strong>کارشناسی ارشد مهندسی هوش مصنوعی</strong></li>
-                        <li><a href= "https://kouroshkiani.com/msc-students/#1696356718618-d69acd63-64ae"><strong>عنوان پایان‌نامه:</strong> تشخیص فعالیت غیرعادی انسان با استفاده از یادگیری عمیق</a></li>
-                        <li><a href="https://modelling.semnan.ac.ir/article_8569.html?lang=fa"><strong>عنوان مقاله:</strong> A Transformer-based model for abnormal activity recognition in video</a></li>
+                        <li><a href="https://kouroshkiani.com/msc-students/#1696356718618-d69acd63-64ae"><strong>عنوان پایان‌نامه:</strong> تشخیص عمل غیرطبیعی انسان با استفاده از یادگیری عمیق</a></li>
+                        <li><a href="https://doi.org/10.22075/jme.2024.32914.2604"><strong>عنوان مقاله:</strong> بکارگیری مدل مبتنی بر ترنسفورمر برای تشخیص فعالیت‌های غیرطبیعی در ویدئو</a></li>
                     </ul>
                 </div>
-        
+
                 <div class="education-entry">
                     <div class="education-title">
-                        <h3>دانشگاه شیخ بهائی، دانشکده مهندسی کامپیوتر، ایران</h3>
+                        <h3><a href="https://shbu.ac.ir/department/group.php?groupID=2&amp;lang=en" target="_blank">دانشگاه شیخ بهایی، دانشکده کامپیوتر</a>، ایران</h3>
                         <span>۱۳۹۴ – ۱۳۹۸</span>
                     </div>
                     <ul>
                         <li><strong>کارشناسی مهندسی نرم‌افزار کامپیوتر</strong></li>
+                        <li><strong>عنوان پایان‌نامه:</strong> بررسی استراتژی‌های امنیتی به‌کاررفته در نمونه‌های نوظهور فناوری‌های مبتنی بر اینترنت اشیاء</li>
                     </ul>
                 </div>
             </section>
-        
+
             <section>
                 <h2>مهارت‌ها و موارد دیگر</h2>
-                
+
                 <h3>تدریس:</h3>
                 <div class="tutor-entry">
                     <div class="tutor-title">
                         <h4>مدرس برنامه‌نویسی هوش مصنوعی با پایتون، اصفهان، ایران</h4>
-                        <span>۱۴۰۲ – اکنون</span>
+                        <span>۱۴۰۳ – اکنون</span>
                     </div>
                     <ul>
-                        <li>مدرس برنامه‌نویسی هوش مصنوعی با پایتون با تمرکز بر مدل‌های یادگیری عمیق به صورت خصوصی برای ۳+ دانش‌آموز</li>
+                        <li>مدرس برنامه‌نویسی هوش مصنوعی با پایتون با تمرکز بر مدل‌های یادگیری عمیق به‌صورت خصوصی برای ۳+ دانش‌آموز</li>
                     </ul>
                 </div>
-                
+
                 <div class="tutor-entry">
                     <div class="tutor-title">
                         <h4>مدرس برنامه‌نویسی پایتون مقدماتی تا پیشرفته، اصفهان، ایران</h4>
                         <span>۱۴۰۱ – اکنون</span>
                     </div>
                     <ul>
-                        <li>مدرس برنامه‌نویسی پایتون مقدماتی تا پیشرفته به صورت خصوصی برای ۵+ دانش‌آموز</li>
+                        <li>مدرس برنامه‌نویسی پایتون مقدماتی تا پیشرفته به‌صورت خصوصی برای ۵+ دانش‌آموز</li>
                     </ul>
                 </div>
-        
+
                 <div class="tutor-entry">
                     <div class="tutor-title">
                         <h4>اصول پایان‌نامه‌نویسی و مقاله‌نویسی، سمنان، ایران</h4>
@@ -391,17 +427,15 @@
                         <li>مدرس کار با نرم‌افزار ورد و پاورپوینت با تمرکز بر نگارش پایان‌نامه و مقالات علمی و ارائه آن‌ها</li>
                     </ul>
                 </div>
-        
+
                 <h3>مهارت‌ها:</h3>
                 <ul class="skills-list">
-                    <li>فریمورک‌های هوش مصنوعی: Tensorflow, Keras and Pytorch</li>
-                    <li>کتابخانه‌های هوش مصنوعی: MediaPipe, Numpy, Pandas, OpenCV, Matplotlib, Scikit-learn</li>
-                    <li>ابزارهای IDE هوش مصنوعی: Pycharm, Anaconda, Google colab</li>
-                    <li>DevOps: Git, GitHub Actions, GitLab, Docker, Jira</li>
-                    <li>مفاهیم برنامه‌نویسی: Algorithms, Data Structures, OOP</li>
-                    <li>زبان‌های برنامه‌نویسی: Python, Lua, Java and C++</li>
-                    <li>مستندسازی: Confluence, Markdown Language</li>
-                    <li>یادگیری: گذراندن دوره زبان انگلیسی آیلتس، دوره برنامه‌نویسی کاتلین اندروید</li>
+                    <li><strong>زبان‌های برنامه‌نویسی:</strong> Python, C++</li>
+                    <li><strong>هوش مصنوعی و پردازش داده:</strong> TensorFlow, Keras, PyTorch, OpenCV, MediaPipe, OpenPose, Scikit-learn, Pandas, NumPy, CNN, Transformer, Data Augmentation, Data Preprocessing</li>
+                    <li><strong>اینترنت اشیاء و سخت‌افزار (IoT &amp; Embedded):</strong> ESP32-WROOM, Arduino, Raspberry Pi, Rock Pi, JNI, RTSP, MQTT, Modbus RTU, Zigbee, Wi-Fi, IR, RESTful API, Message Broker, Docker</li>
+                    <li><strong>توسعه نرم‌افزار و ابزارها:</strong> Git, GitHub, Jira, Confluence, Markdown</li>
+                    <li><strong>مفاهیم و متدولوژی:</strong> OOP, Data Structures &amp; Algorithms, Agile/Scrum (Sprint Planning, Backlog Refinement)</li>
+                    <li><strong>در حال یادگیری:</strong> LLM, AI Agents, TensorFlow Lite, IELTS</li>
                 </ul>
             </section>
 
@@ -419,10 +453,10 @@
                     </div>
                 </div>
             </section>
-        
+
             <section>
                 <h2>فعالیت‌های داوطلبانه</h2>
-                <p>داوطلب به عنوان مدرس برای نوجوانان تحت پوشش بهزیستی در کلاس‌های برنامه‌نویسی و نگارش پایان‌نامه و مقالات با نرم‌افزار ورد (۱۳۹۸، ۱۴۰۲-۳)</p>
+                <p>آموزش رایگان برنامه‌نویسی و نگارش پایان‌نامه و مقاله برای دانشجویان در کلاس‌ها (۱۳۹۷ – ۱۴۰۳)</p>
             </section>
         </div>
 
@@ -431,6 +465,7 @@
                 <img class="profile-picture" src="picofme.png" alt="Amirmohamad Ahmadi Profile Picture">
                 <h1>AMIRMOHAMAD AHMADI</h1>
                 <div class="contact-info">
+                    <span><i class="fas fa-location-dot"></i> Isfahan, IR</span>
                     <a href="tel:+989330673103"><i class="fas fa-phone"></i> +98 9330673103</a>
                     <a href="mailto:amir.mo.ahmadi@gmail.com"><i class="fas fa-envelope"></i> amir.mo.ahmadi@gmail.com</a>
                     <a href="https://linkedin.com/in/amirmohamadahmadi" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/amirmohamadahmadi</a>
@@ -440,70 +475,81 @@
 
             <section class="summary">
                 <p>
-                    Senior AI developer with more than 5 years of experience in research and development and application of enterprise software in areas such as: Artificial Intelligence (AI) and Internet of Things (IOT). Use of skills and experience gained in research and use of design models for applications in activity detection in video, audio and image processing with Tensorflow, Keras and Pytorch to evaluate the highest standards and optimizations to create standards. Innovative and advanced business solutions with high teamwork to help others and teammates. Job objective development and implementation of innovative and practical projects based on AI and IOT.
+                    Senior AI and IoT Developer with 5+ years of experience in research and development, embedded systems and enterprise software. Experienced in developing practical AI solutions for human activity recognition, computer vision and audio processing using TensorFlow, Keras and PyTorch, alongside IoT architecture and microcontroller-based products. Combines hands-on engineering with cross-functional coordination, technical training and a collaborative approach to delivering innovative commercial solutions.
                 </p>
             </section>
 
             <section>
                 <h2>PROFESSIONAL EXPERIENCE</h2>
-                
+
                 <div class="job-entry">
                     <div class="job-title">
-                        <h3>MPJ, Isfahan, IR</h3>
-                        <span>July 2022 – Present</span>
+                        <h3><a href="https://mpjgroup.co/en/" target="_blank">Sima Cable Naghshe Jahan</a>, Isfahan, IR</h3>
+                        <span>Nov 2024 – Dec 2026</span>
                     </div>
-                    <h3>Senior AI developer , <small>Onsite (Full time)</small></h4>
+                    <h4 class="job-role">Senior AI &amp; Microcontroller Developer, <small>Full-time, on-site</small></h4>
                     <ul>
-                        <li>Led the artificial intelligence department of the MPJ Industries Group's R&D (IoT) unit, which has more than 2 employees in 3 departments including video, audio, image and text processing.</li>
-                        <li>Planning and implementation of 4 demos for fire detection, optimization of electricity consumption at home, recognition of human activities from video and recognition of Persian command voice with Tensorflow and Keras.</li>
-                        <li>Holding technical training courses for the company's employees (internship) with the concepts of image and video processing, neural networks, convolutional neural networks, transformers with Tensorflow and Keras more than 360 hours of lectures and implementation.</li>
+                        <li>Led the development of an integrated smart-home ecosystem using ESP32-WROOM, optocoupler isolation and Wi-Fi, contributing to the launch of 7 new IoT products and a 25% expansion of the company’s service portfolio.</li>
+                        <li>Developed water-leak, gas-leak and smoke-detection safety devices using humidity, flow, gas and smoke sensors. Integrated JSON messaging with a message broker and relay activation; the solutions were reported to reduce financial and physical harm by 30%.</li>
+                        <li>Designed the ThermoScan Optimizer non-contact temperature measurement device using an infrared sensor, sending thermal-map data to a message broker and reducing heating-system energy consumption by 15%.</li>
+                        <li>Implemented smart relay products, including single-channel boiler, three-channel evaporative cooler, four-channel electric-curtain and I/O relays, with fixed, momentary, toggle and automation modes for scenario-based equipment control.</li>
+                        <li>Developed a deep-learning model to detect abnormal activities, including fighting and falling, using the SPHAR and UCF-Crime datasets, data augmentation, OpenPose and MediaPipe; achieved reported accuracy above 70%.</li>
+                        <li>Built a proof-of-concept Persian voice-command recognition service using audio feature extraction, TensorFlow and Keras, with connectivity to the IoT ecosystem.</li>
+                        <li>Integrated live IP camera streaming (RJ45) into MPJLink using RTSP and latency optimisation, enabling local and remote security monitoring and contributing to a 20% increase in services and products.</li>
                     </ul>
                 </div>
 
                 <div class="job-entry">
                     <div class="job-title">
-                        <h3>Senior Researcher , <small>Onsite (Full time)</small></h3>
-                        <span>July 2022 – Present</span>
+                        <h3><a href="https://mpjgroup.co/en/" target="_blank">Sima Cable Naghshe Jahan</a>, Isfahan, IR</h3>
+                        <span>Aug 2023 – Nov 2024</span>
                     </div>
+                    <h4 class="job-role">AI &amp; IoT Researcher and Developer</h4>
                     <ul>
-                        <li>Researcher of Electronics and Internet of Things research and development unit and interface between hardware and software department of MPJ Industries Group, which has more than 25 employees in 5 departments including R&D, UI/UX, hardware, software and artificial intelligence.</li>
-                        <li>Providing solutions for optimal use of hardware and increasing business sales efficiency by more than 20%.</li>
-                        <li>Developer of the hood, split, duct split, thermostat, touch keys and scenario control system with communication protocols including: Modbus RTU, Zigbee, IR on hardware modules including: Raspberry Pi, Rock Pi, Arduino.</li>
-                        <li>Organization of the implementation project of integrated software and hardware at commercial level with Java.</li>
-                        <li>Evaluated the process of recruiting and holding training courses for the technical improvement of the company's employees and trainees (internships) by lecturing more than 360 training hours.</li>
+                        <li>Developed smart-home and building systems integrating Modbus RTU, Zigbee and infrared (IR), implementing firmware and embedded software on Raspberry Pi, Rock Pi and Arduino platforms and designing the IoT architecture.</li>
+                        <li>Developed IoT-enabled cooker and extractor-hood solutions using APIs, Wi-Fi Manager, RESTful APIs and message brokers, contributing to an approximately 25% expansion of the company’s products and services.</li>
+                        <li>Prepared and defended a technology-based proposal, “IoT-Based Hardware and Software System”, to support the company’s knowledge-based status; this resulted in a tax exemption and an approximately 15% reduction in company costs.</li>
+                        <li>Coordinated work across R&amp;D, UI/UX, hardware, software and AI teams, involving more than 12 employees and customer-facing communication. Applied Scrum practices, including backlog refinement, sprint planning and daily stand-ups, and managed requirements and the product backlog through Jira and Confluence.</li>
+                        <li>Improved cross-team coordination time by approximately 30% and minimised rework through clearer progress tracking, incremental delivery and requirements documentation.</li>
+                        <li>Recommended hardware optimisation through resource-use analysis and hardware-module redesign, contributing to a reported increase of more than 20% in business sales efficiency.</li>
+                        <li>Designed technical learning pathways and delivered more than 360 hours of training for employees and interns. Topics included EEPROM, OTA, multithreading, MQTT, RESTful APIs, CNNs, TensorFlow, OpenPose, MediaPipe, data augmentation and preprocessing.</li>
+                        <li>Recruited and assessed approximately five student interns through the University of Isfahan Growth and Technology Centre, supporting their potential employment and contributing to an approximately 20% reduction in office rental costs.</li>
                     </ul>
                 </div>
-                
+
                 <div class="job-entry">
                     <div class="job-title">
-                        <h3>Java/Kotlin Developer</h3>
-                        <span>July 2022 – Present</span>
+                        <h3><a href="https://mpjgroup.co/en/" target="_blank">Jahan Ara Spadana</a>, Isfahan, IR</h3>
+                        <span>Aug 2022 – Jul 2023</span>
                     </div>
+                    <h4 class="job-role">Researcher</h4>
                     <ul>
-                        <li>Using special C++ libraries to use small screen and smart touch panel hardware ports with Android operating system in 6 months.</li>
-                        <li>Presenting the Android demo program and attracting the attention of the CEO and gaining points and investment for the commercialization of products with the aim of localizing the software platform.</li>
+                        <li>Researched smart-home solutions and products, including Tuya, Sitec, Hamvand and Link App, as well as Modbus, Zigbee and Wi-Fi standards, gateways and Tuya touchscreen panels.</li>
+                        <li>Recommended solutions that increased Modbus and Zigbee support by approximately 50% and reduced customer costs by around 30%, helping create a competitive advantage.</li>
+                        <li>Implemented access to hardware ports and control of two independent displays on an Android touch panel using C++ libraries and JNI within four months.</li>
+                        <li>Proposed an MVP for localising and developing the Persian-language MPJ Link software, increasing development speed by approximately 50%. Improved compatibility with Modbus switch and thermostat brands, increasing interoperability by around 30% and business trust and collaboration by around 70%; the work helped secure management support and investment for commercialisation and localisation.</li>
                     </ul>
                 </div>
             </section>
 
             <section>
                 <h2>EDUCATION</h2>
-                
+
                 <div class="education-entry">
                     <div class="education-title">
-                        <h3>University of Semnan, Faculty of Electrical and Computer Engineering, IR</h3>
+                        <h3><a href="https://enece.semnan.ac.ir/" target="_blank">University of Semnan, Faculty of Electrical and Computer Engineering</a>, IR</h3>
                         <span>2020 – 2024</span>
                     </div>
                     <ul>
-                        <li><strong>M.Sc. in Artificial intelligence Engineering</strong></li>
-                        <li><a href= "https://kouroshkiani.com/msc-students/#1696356718618-d69acd63-64ae"><strong>Thesis title:</strong> Abnormal human action recognition using deep learning</a></li>
-                        <li><a href="https://modelling.semnan.ac.ir/article_8569.html?lang=en"><strong>Article tittle:</strong> A Transformer-based model for abnormal activity recognition in video</a></li>
+                        <li><strong>M.Sc. in Artificial Intelligence Engineering</strong></li>
+                        <li><a href="https://kouroshkiani.com/msc-students/#1696356718618-d69acd63-64ae"><strong>Thesis title:</strong> Abnormal human action recognition using deep learning</a></li>
+                        <li><a href="https://modelling.semnan.ac.ir/article_8569.html?lang=en"><strong>Article title:</strong> A Transformer-based model for abnormal activity recognition in video</a></li>
                     </ul>
                 </div>
 
                 <div class="education-entry">
                     <div class="education-title">
-                        <h3>University of Sheikh Bahaei University, Faculty of Computer Engineering, IR</h3>
+                        <h3><a href="https://shbu.ac.ir/department/group.php?groupID=2&amp;lang=en" target="_blank">Sheikh Bahaei University, Faculty of Computer Engineering</a>, IR</h3>
                         <span>2015 – 2019</span>
                     </div>
                     <ul>
@@ -513,22 +559,22 @@
             </section>
 
             <section>
-                <h2>SKILLS & OTHER</h2>
-                
+                <h2>SKILLS &amp; OTHER</h2>
+
                 <h3>Tutor:</h3>
                 <div class="tutor-entry">
                     <div class="tutor-title">
-                        <h4>AI programming with python Tutor, Isfahan, IR</h4>
+                        <h4>AI programming with Python Tutor, Isfahan, IR</h4>
                         <span>2024 – present</span>
                     </div>
                     <ul>
                         <li>Artificial intelligence programming Tutor with Python focusing on deep learning models privately for 3+ students</li>
                     </ul>
                 </div>
-                
+
                 <div class="tutor-entry">
                     <div class="tutor-title">
-                        <h4>Beginner to Advanced python Tutor, Isfahan, IR</h4>
+                        <h4>Beginner to Advanced Python Tutor, Isfahan, IR</h4>
                         <span>2022 – present</span>
                     </div>
                     <ul>
@@ -548,17 +594,15 @@
 
                 <h3>Skills:</h3>
                 <ul class="skills-list">
-                    <li>AI Frameworks: Tensorflow, Keras and Pytorch</li>
-                    <li>AI Libraries: MediaPipe, Numpy, Pandas, OpenCV, Matplotlib, Scikit-learn</li>
-                    <li>IDE Tools AI: Pycharm, Anaconda, Google colab</li>
-                    <li>DevOps: Git, GitHub Actions, GitLab, Docker, Jira</li>
-                    <li>Programming concepts: Algorithms, Data Structures, OOP</li>
-                    <li>Programming language: Python, Lua, Java and C++</li>
-                    <li>Documentation: Confluence, Markdown language</li>
-                    <li>Learning: Taking the IELTS English course, Android Kotlin programming course</li>
+                    <li><strong>Programming:</strong> Python, C++</li>
+                    <li><strong>AI, Machine Learning &amp; Data:</strong> TensorFlow, Keras, PyTorch, OpenCV, MediaPipe, OpenPose, Scikit-learn, Pandas, NumPy, CNNs, Transformers, data augmentation, data preprocessing</li>
+                    <li><strong>IoT &amp; Embedded Systems:</strong> ESP32-WROOM, Arduino, Raspberry Pi, Rock Pi, JNI, RTSP, MQTT, Modbus RTU, Zigbee, Wi-Fi, IR, RESTful APIs, message brokers, Docker</li>
+                    <li><strong>Software &amp; Development Tools:</strong> Git, GitHub, Jira, Confluence, Markdown</li>
+                    <li><strong>Methods &amp; Core Concepts:</strong> OOP, data structures and algorithms, Agile/Scrum, sprint planning, backlog refinement</li>
+                    <li><strong>Currently learning:</strong> Large Language Models (LLMs), AI agents, TensorFlow Lite and IELTS preparation</li>
                 </ul>
             </section>
-            
+
             <section>
                 <h2>Certificates</h2>
                 <div class="certificates-container">
@@ -576,7 +620,7 @@
 
             <section>
                 <h2>Volunteering</h2>
-                <p>Volunteered as a tutor for youngsters on welfare in programming classes and Writing theses and articles with Word software (2019, 2023-4)</p>
+                <p>Volunteered as a tutor for <a href="https://en.behzisti.ir/" target="_blank">youngsters on welfare</a> in programming classes and writing theses and articles with Word software (2019, 2023-4)</p>
             </section>
         </div>
     </div>
